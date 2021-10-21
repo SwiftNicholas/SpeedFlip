@@ -12,120 +12,86 @@ import GameplayKit
 import UIKit
 
 
-class AudioLogic{
+/// Singleton audio handling
+struct AudioLogic{
     
+    /// Singleton sealed init
     private init(){}
     
+    /// Singleton access point for audio handling
     static var audio = AudioLogic()
     
-    // creats base
+    /// Queue players are used to set a list of audio files. These can then be set in a loop using the AVPlayerLooper
     var queuePlayers = [AVQueuePlayer]()
     
-    var looper:AVPlayerLooper!
-    
+    /// Audio player used for one shot sound effects, must use the reference to avoid falling out of scope while playing sounds
     var soundEffectPlayer = AVPlayer()
+    var looper: AVPlayerLooper!
+    
+    
+    /// Use rawValue() to get back the appropriate URL for the soundeffect.
+    enum SoundEffectTypes {
+        case Flip
+        case Match
+        
+        func rawValue() -> URL? {
+            switch self {case .Flip:
+                return Bundle.main.url(forResource: "CardFlipSoundEffect", withExtension: "wav", subdirectory: "/SoundEffects")
+            case .Match:
+               return Bundle.main.url(forResource: "MatchSoundEffect", withExtension: "wav", subdirectory: "/SoundEffects")
+                
+            }
+        }
+    }
+
+    
+    /// Loads a sound effect from url stores it in this singleton instance and plays it. The singleton avoids unneccessary changes it scope when playing sound effects.
+    mutating func playSoundEffect(type: SoundEffectTypes){
+        guard !game.mute else {return}
+        
+        let player = AVPlayer.configureSoundEffectPlayerFromURL(url: type.rawValue()!)
+        self.soundEffectPlayer = player
+        self.soundEffectPlayer.play()
+    }
 
     
     func mute(){
-        
-        for players in self.queuePlayers{
-        
-            players.pause()
-        }
+        guard !self.queuePlayers.isEmpty else {return}
+        _ = self.queuePlayers.map({$0.pause})
     }
     
     func unmute(){
-        
-        for players in self.queuePlayers{
-            
-            players.play()
-        }
-        
-        
+        guard !self.queuePlayers.isEmpty else {return}
+        _ = self.queuePlayers.map({$0.play})
     }
     
-    func playSoundtrack(screen:String, volume:Float){
-        guard game.mute == false else {
-            print("Muted")
-            return
-        }
+    mutating func playSoundtrack(screen:String, volume:Float){
+        guard !game.mute else {print("Muted"); return}
+        guard let url = Bundle.main.urls(
+            forResourcesWithExtension: "wav",
+            subdirectory: screen) else {return}
+        guard !url.isEmpty else {return}
         
-        let session = AVAudioSession.sharedInstance()
-        print("Accessing shared audio instance")
-      
-        print("Setting output channels")
-        do {try session.setPreferredOutputNumberOfChannels(4)}
-        catch
-        {assertionFailure("Cannot set output channels")}
-        print("Output channels set")
-        
-        print("Setting input channels")
-        do {try session.setPreferredInputNumberOfChannels(4)}
-        catch
-        {assertionFailure("Cannot set Input channels")}
-        print("Input channels set")
-        
-        
-        var soundtrackAVItemArray = [AVPlayerItem]()
-        let url = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: screen)
-       
-        if url?.count != 0 {
-        
+        var soundtracks = [AVPlayerItem]()
+    
             let randomNumberSource = GKRandomSource()
-            let shuffedTracks = randomNumberSource.arrayByShufflingObjects(in: url!) as! [URL]
-            for (_, element) in (shuffedTracks.enumerated()){
-                let asset = AVAsset(url: element)
-                
-                let avItem = AVPlayerItem(asset: asset)
-                
-                soundtrackAVItemArray.append(avItem)
-            }
+            let shuffedTracks = randomNumberSource.arrayByShufflingObjects(in: url) as! [URL]
+        
+            for (_, url) in (shuffedTracks.enumerated()){
+                soundtracks.append(AVPlayerItem.createPlayer(from: url))
             
-            let player = AVQueuePlayer(items: soundtrackAVItemArray)
-            
-            looper = AVPlayerLooper(player: player, templateItem: soundtrackAVItemArray[0])
-            
+            let player = AVQueuePlayer(items: soundtracks)
+                player.volume = volume
+            looper = AVPlayerLooper(player: player, templateItem: soundtracks[0])
             self.queuePlayers.append(player)
-            // Begin looping playback
-           
-            self.queuePlayers.last?.volume = volume
-            self.queuePlayers.last?.play()
-          
-         
-         
+            self.queuePlayers.last!.play()
         }
     }
     
     
   
     
-    func cardFlipSoundEffect(){
-        if game.mute {return}
-        
-                let url = Bundle.main.url(forResource: "CardFlipSoundEffect", withExtension: "wav", subdirectory: "/SoundEffects")
-                
-                let avItem = AVPlayerItem(url: url!)
-        
-                self.soundEffectPlayer = AVPlayer(playerItem: avItem)
-                self.soundEffectPlayer.volume = 0.5
-                self.soundEffectPlayer.actionAtItemEnd = .pause
-                self.soundEffectPlayer.play()
-        
-    }
     
-    func matchSoundEffect(){
-        if game.mute{return}
-        
-        let url = Bundle.main.url(forResource: "MatchSoundEffect", withExtension: "wav", subdirectory: "/SoundEffects")
-        
-        let avItem = AVPlayerItem(url: url!)
-        
-        self.soundEffectPlayer = AVPlayer(playerItem: avItem)
-        self.soundEffectPlayer.volume = 0.5
-        self.soundEffectPlayer.actionAtItemEnd = .pause
-        self.soundEffectPlayer.play()
-        
-    }
     
     func crossFade(active:AVQueuePlayer, new:AVQueuePlayer, newVolume:Float){
     
@@ -155,6 +121,27 @@ class AudioLogic{
         }())
        
     }
-    
-    
 }
+
+
+extension AVPlayerItem {
+   static func createPlayer(from URL: URL) -> AVPlayerItem{
+        let asset = AVAsset(url: URL)
+        let avPlayer = AVPlayerItem(asset: asset)
+        return avPlayer
+    }
+}
+
+extension AVPlayer {
+    
+    static func configureSoundEffectPlayerFromURL(url: URL, volume: Float = 0.5, action: ActionAtItemEnd = .pause) -> AVPlayer{
+      
+        let avItem = AVPlayerItem(url: url)
+        let player = AVPlayer(playerItem: avItem)
+        player.volume = volume
+        player.actionAtItemEnd = action
+        return player
+    }
+}
+
+

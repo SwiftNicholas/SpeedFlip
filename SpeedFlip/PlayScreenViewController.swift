@@ -127,7 +127,7 @@ class PlayScreen: UIViewController, UIGestureRecognizerDelegate {
         }
        game.activeCard = nil
         if game.mute != true{
-            gameAudio.matchSoundEffect()
+            gameAudio.playSoundEffect(type: .Match)
         }
        game.numberOfMatches += 1
         if game.numberOfMatches == (self.cardViewOutletCollection.count/2){
