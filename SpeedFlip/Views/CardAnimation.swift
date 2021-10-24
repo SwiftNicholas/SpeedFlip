@@ -14,7 +14,7 @@ extension Array where Element : Card {
 
     func animate(delay:Double = 0, duration: Double = 0.25, flipFaceUp: Bool, completion: @escaping () -> Void){
         
-        gameAudio.playSoundEffect(type: .Flip)
+        AudioManager.shared.playSoundEffect(type: .Flip)
         //Allows animations to be given delay for preview purposes
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             

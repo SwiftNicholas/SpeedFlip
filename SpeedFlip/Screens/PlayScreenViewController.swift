@@ -12,8 +12,6 @@ import AVFoundation
 import GameplayKit
 
 // Global singleton accessors
-
-var gameAudio = AudioLogic.audio
 var game: currentGame = currentGame()
 
 class PlayScreen: UIViewController, UIGestureRecognizerDelegate {
@@ -126,9 +124,8 @@ class PlayScreen: UIViewController, UIGestureRecognizerDelegate {
             }
         }
        game.activeCard = nil
-        if game.mute != true{
-            gameAudio.playSoundEffect(type: .Match)
-        }
+        AudioManager.shared.playSoundEffect(type: .Match)
+        
        game.numberOfMatches += 1
         if game.numberOfMatches == (self.cardViewOutletCollection.count/2){
           gameOver()
@@ -206,17 +203,17 @@ class PlayScreen: UIViewController, UIGestureRecognizerDelegate {
             
             // Inserts score object into NSData stack on completion of alert menu selection
             
-            let data = CoreData()
-            let score:Score = data.insert(entityName: "Score", entityType: Score.self, context: nil)
-            
-            score.initials = scoreAlert.textFields?[0].text
-            score.date = Date.init() as NSDate? as Date?
-            score.turns = Int16(game.turns)
-            score.timeSeconds = Int16(time.seconds)
-            score.timeMinutes = Int16(time.minutes)
-            
-            data.contextSave(context: nil, errorHandler: nil)
-            
+//            let data = CoreData()
+//            let score:Score = data.insert(entityName: "Score", entityType: Score.self, context: nil)
+//            
+//            score.initials = scoreAlert.textFields?[0].text
+//            score.date = Date.init() as NSDate? as Date?
+//            score.turns = Int16(game.turns)
+//            score.timeSeconds = Int16(time.seconds)
+//            score.timeMinutes = Int16(time.minutes)
+//            
+//            data.contextSave(context: nil, errorHandler: nil)
+//            
             
             let alert = createAlert(scoreString: scoreString)
             // Presents second alert view

@@ -19,7 +19,6 @@ class Stopwatch {
    
     init(delegate: StopwatchDelegate){
         self.delegate = delegate
-    
     }
     
     var delegate: StopwatchDelegate

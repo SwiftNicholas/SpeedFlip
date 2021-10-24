@@ -18,7 +18,6 @@ class currentGame{
     var height: Int = 8
     var width: Int = 4
     var turns: Int = 0
-    var mute = false
 
     
     init(){

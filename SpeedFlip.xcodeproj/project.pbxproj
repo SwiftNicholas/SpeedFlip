@@ -8,18 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BF56F6122721D21B00BFF8F7 /* SpeedFlipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6112721D21B00BFF8F7 /* SpeedFlipApp.swift */; };
-		BF56F6192721D21E00BFF8F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF56F6182721D21E00BFF8F7 /* Preview Assets.xcassets */; };
-		BF56F61B2721D21E00BFF8F7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F61A2721D21E00BFF8F7 /* Persistence.swift */; };
-		BF56F61E2721D21E00BFF8F7 /* SpeedFlip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF56F61C2721D21E00BFF8F7 /* SpeedFlip.xcdatamodeld */; };
-		BF56F6272721D35600BFF8F7 /* AudioLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6262721D35600BFF8F7 /* AudioLogic.swift */; };
+		BF56F6272721D35600BFF8F7 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6262721D35600BFF8F7 /* AudioManager.swift */; };
 		BF56F6292721D37600BFF8F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6282721D37600BFF8F7 /* CardView.swift */; };
 		BF56F62B2721D39400BFF8F7 /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F62A2721D39400BFF8F7 /* CardAnimation.swift */; };
 		BF56F62D2721D3B000BFF8F7 /* CardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F62C2721D3B000BFF8F7 /* CardGrid.swift */; };
-		BF56F62F2721D3BF00BFF8F7 /* CDSPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F62E2721D3BF00BFF8F7 /* CDSPersistence.swift */; };
-		BF56F6312721D3D200BFF8F7 /* CoreDataGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6302721D3D200BFF8F7 /* CoreDataGeneric.swift */; };
 		BF56F6332721D3E100BFF8F7 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6322721D3E100BFF8F7 /* GameInfo.swift */; };
 		BF56F6352721D3F900BFF8F7 /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */; };
-		BF56F6382721D40300BFF8F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6362721D3FF00BFF8F7 /* Model.xcdatamodeld */; };
 		BF56F63A2721D40900BFF8F7 /* PlayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */; };
 		BF56F63C2721D40D00BFF8F7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */; };
 		BF56F63E2721D41300BFF8F7 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63D2721D41300BFF8F7 /* Stopwatch.swift */; };
@@ -35,18 +29,12 @@
 /* Begin PBXFileReference section */
 		BF56F60F2721D21B00BFF8F7 /* SpeedFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF56F6112721D21B00BFF8F7 /* SpeedFlipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipApp.swift; sourceTree = "<group>"; };
-		BF56F6182721D21E00BFF8F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BF56F61A2721D21E00BFF8F7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		BF56F61D2721D21E00BFF8F7 /* SpeedFlip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedFlip.xcdatamodel; sourceTree = "<group>"; };
-		BF56F6262721D35600BFF8F7 /* AudioLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLogic.swift; sourceTree = "<group>"; };
+		BF56F6262721D35600BFF8F7 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		BF56F6282721D37600BFF8F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BF56F62A2721D39400BFF8F7 /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
 		BF56F62C2721D3B000BFF8F7 /* CardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrid.swift; sourceTree = "<group>"; };
-		BF56F62E2721D3BF00BFF8F7 /* CDSPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSPersistence.swift; sourceTree = "<group>"; };
-		BF56F6302721D3D200BFF8F7 /* CoreDataGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGeneric.swift; sourceTree = "<group>"; };
 		BF56F6322721D3E100BFF8F7 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
-		BF56F6372721D3FF00BFF8F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScreenViewController.swift; sourceTree = "<group>"; };
 		BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		BF56F63D2721D41300BFF8F7 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
@@ -92,36 +80,46 @@
 				BF56F64B2721D77700BFF8F7 /* SoundEffects */,
 				BF56F6492721D77100BFF8F7 /* MenuAudio */,
 				BF56F6472721D76A00BFF8F7 /* GameAudio */,
-				BF56F63F2721D41600BFF8F7 /* TimerView(UIView).swift */,
+				BF83E4BD2725D7210052D3D5 /* Views */,
 				BF56F63D2721D41300BFF8F7 /* Stopwatch.swift */,
-				BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */,
-				BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */,
-				BF56F6362721D3FF00BFF8F7 /* Model.xcdatamodeld */,
+				BF83E4BE2725D7380052D3D5 /* Screens */,
 				BF56F6112721D21B00BFF8F7 /* SpeedFlipApp.swift */,
-				BF56F6432721D52B00BFF8F7 /* LaunchScreen.storyboard */,
-				BF56F6442721D52B00BFF8F7 /* Main.storyboard */,
+				BF83E4C22725D8060052D3D5 /* Storyboards */,
 				BF56F6412721D52700BFF8F7 /* Assets.xcassets */,
-				BF56F61A2721D21E00BFF8F7 /* Persistence.swift */,
-				BF56F61C2721D21E00BFF8F7 /* SpeedFlip.xcdatamodeld */,
-				BF56F6172721D21E00BFF8F7 /* Preview Content */,
-				BF56F6262721D35600BFF8F7 /* AudioLogic.swift */,
-				BF56F6282721D37600BFF8F7 /* CardView.swift */,
-				BF56F62A2721D39400BFF8F7 /* CardAnimation.swift */,
-				BF56F62C2721D3B000BFF8F7 /* CardGrid.swift */,
-				BF56F62E2721D3BF00BFF8F7 /* CDSPersistence.swift */,
-				BF56F6302721D3D200BFF8F7 /* CoreDataGeneric.swift */,
+				BF56F6262721D35600BFF8F7 /* AudioManager.swift */,
 				BF56F6322721D3E100BFF8F7 /* GameInfo.swift */,
-				BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */,
 			);
 			path = SpeedFlip;
 			sourceTree = "<group>";
 		};
-		BF56F6172721D21E00BFF8F7 /* Preview Content */ = {
+		BF83E4BD2725D7210052D3D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF56F6182721D21E00BFF8F7 /* Preview Assets.xcassets */,
+				BF56F62A2721D39400BFF8F7 /* CardAnimation.swift */,
+				BF56F62C2721D3B000BFF8F7 /* CardGrid.swift */,
+				BF56F6282721D37600BFF8F7 /* CardView.swift */,
+				BF56F63F2721D41600BFF8F7 /* TimerView(UIView).swift */,
 			);
-			path = "Preview Content";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF83E4BE2725D7380052D3D5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */,
+				BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */,
+				BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BF83E4C22725D8060052D3D5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BF56F6432721D52B00BFF8F7 /* LaunchScreen.storyboard */,
+				BF56F6442721D52B00BFF8F7 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +183,6 @@
 				BF56F6452721D52B00BFF8F7 /* LaunchScreen.storyboard in Resources */,
 				BF56F64C2721D77700BFF8F7 /* SoundEffects in Resources */,
 				BF56F6422721D52700BFF8F7 /* Assets.xcassets in Resources */,
-				BF56F6192721D21E00BFF8F7 /* Preview Assets.xcassets in Resources */,
 				BF56F6462721D52B00BFF8F7 /* Main.storyboard in Resources */,
 				BF56F64A2721D77100BFF8F7 /* MenuAudio in Resources */,
 				BF56F6482721D76B00BFF8F7 /* GameAudio in Resources */,
@@ -199,20 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF56F61B2721D21E00BFF8F7 /* Persistence.swift in Sources */,
 				BF56F62D2721D3B000BFF8F7 /* CardGrid.swift in Sources */,
 				BF56F63C2721D40D00BFF8F7 /* ScoreViewController.swift in Sources */,
-				BF56F6312721D3D200BFF8F7 /* CoreDataGeneric.swift in Sources */,
 				BF56F62B2721D39400BFF8F7 /* CardAnimation.swift in Sources */,
 				BF56F6352721D3F900BFF8F7 /* MenuScreenViewController.swift in Sources */,
 				BF56F63E2721D41300BFF8F7 /* Stopwatch.swift in Sources */,
 				BF56F63A2721D40900BFF8F7 /* PlayScreenViewController.swift in Sources */,
-				BF56F62F2721D3BF00BFF8F7 /* CDSPersistence.swift in Sources */,
-				BF56F6272721D35600BFF8F7 /* AudioLogic.swift in Sources */,
-				BF56F61E2721D21E00BFF8F7 /* SpeedFlip.xcdatamodeld in Sources */,
+				BF56F6272721D35600BFF8F7 /* AudioManager.swift in Sources */,
 				BF56F6332721D3E100BFF8F7 /* GameInfo.swift in Sources */,
 				BF56F6292721D37600BFF8F7 /* CardView.swift in Sources */,
-				BF56F6382721D40300BFF8F7 /* Model.xcdatamodeld in Sources */,
 				BF56F6402721D41600BFF8F7 /* TimerView(UIView).swift in Sources */,
 				BF56F6122721D21B00BFF8F7 /* SpeedFlipApp.swift in Sources */,
 			);
@@ -344,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "SpeedFlip/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9Z83TAWGQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -374,7 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "SpeedFlip/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9Z83TAWGQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -419,29 +411,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BF56F61C2721D21E00BFF8F7 /* SpeedFlip.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BF56F61D2721D21E00BFF8F7 /* SpeedFlip.xcdatamodel */,
-			);
-			currentVersion = BF56F61D2721D21E00BFF8F7 /* SpeedFlip.xcdatamodel */;
-			path = SpeedFlip.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		BF56F6362721D3FF00BFF8F7 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BF56F6372721D3FF00BFF8F7 /* Model.xcdatamodel */,
-			);
-			currentVersion = BF56F6372721D3FF00BFF8F7 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BF082EBE2721CFDD00B0834B /* Project object */;
 }

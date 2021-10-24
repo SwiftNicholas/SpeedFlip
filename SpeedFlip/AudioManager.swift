@@ -13,13 +13,13 @@ import UIKit
 
 
 /// Singleton audio handling
-struct AudioLogic{
+struct AudioManager{
     
     /// Singleton sealed init
     private init(){}
     
     /// Singleton access point for audio handling
-    static var audio = AudioLogic()
+    static var shared = AudioManager()
     
     /// Queue players are used to set a list of audio files. These can then be set in a loop using the AVPlayerLooper
     var queuePlayers = [AVQueuePlayer]()
@@ -27,7 +27,14 @@ struct AudioLogic{
     /// Audio player used for one shot sound effects, must use the reference to avoid falling out of scope while playing sounds
     var soundEffectPlayer = AVPlayer()
     var looper: AVPlayerLooper!
-    
+    var isMuted: Bool = false {didSet {
+        switch isMuted {
+        case true:
+            self.pauseSoundTrack()
+        case false:
+            self.playSoundTrack()
+        }
+    }}
     
     /// Use rawValue() to get back the appropriate URL for the soundeffect.
     enum SoundEffectTypes {
@@ -47,7 +54,7 @@ struct AudioLogic{
     
     /// Loads a sound effect from url stores it in this singleton instance and plays it. The singleton avoids unneccessary changes it scope when playing sound effects.
     mutating func playSoundEffect(type: SoundEffectTypes){
-        guard !game.mute else {return}
+        guard !self.isMuted else {return}
         
         let player = AVPlayer.configureSoundEffectPlayerFromURL(url: type.rawValue()!)
         self.soundEffectPlayer = player
@@ -55,18 +62,18 @@ struct AudioLogic{
     }
 
     
-    func mute(){
+    func pauseSoundTrack(){
         guard !self.queuePlayers.isEmpty else {return}
-        _ = self.queuePlayers.map({$0.pause})
+        self.queuePlayers.forEach({$0.pause()})
     }
     
-    func unmute(){
+    func playSoundTrack(){
         guard !self.queuePlayers.isEmpty else {return}
-        _ = self.queuePlayers.map({$0.play})
+        self.queuePlayers.forEach({$0.play()})
     }
     
     mutating func playSoundtrack(screen:String, volume:Float){
-        guard !game.mute else {print("Muted"); return}
+        guard !self.isMuted else {print("Muted"); return}
         guard let url = Bundle.main.urls(
             forResourcesWithExtension: "wav",
             subdirectory: screen) else {return}
@@ -89,12 +96,8 @@ struct AudioLogic{
     }
     
     
-  
-    
-    
-    
     func crossFade(active:AVQueuePlayer, new:AVQueuePlayer, newVolume:Float){
-    
+        
         func ramp(delay:Double, active:AVQueuePlayer, new:AVQueuePlayer, completion:()){
                     var localDelay = delay
                 for _ in stride(from: 0, to: newVolume, by: 0.01) {
@@ -119,7 +122,6 @@ struct AudioLogic{
             DispatchQueue.main.asyncAfter(deadline: .now() + 8){
                 active.pause()}
         }())
-       
     }
 }
 
