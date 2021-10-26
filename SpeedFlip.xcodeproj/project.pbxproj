@@ -15,7 +15,7 @@
 		BF56F6332721D3E100BFF8F7 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6322721D3E100BFF8F7 /* GameInfo.swift */; };
 		BF56F6352721D3F900BFF8F7 /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */; };
 		BF56F63A2721D40900BFF8F7 /* PlayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */; };
-		BF56F63C2721D40D00BFF8F7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */; };
+		BF56F63C2721D40D00BFF8F7 /* ScoreViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63B2721D40D00BFF8F7 /* ScoreViewSwiftUI.swift */; };
 		BF56F63E2721D41300BFF8F7 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63D2721D41300BFF8F7 /* Stopwatch.swift */; };
 		BF56F6402721D41600BFF8F7 /* TimerView(UIView).swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56F63F2721D41600BFF8F7 /* TimerView(UIView).swift */; };
 		BF56F6422721D52700BFF8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF56F6412721D52700BFF8F7 /* Assets.xcassets */; };
@@ -29,6 +29,7 @@
 		BF83E4D027275C2B0052D3D5 /* SpeedFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4CF27275C2B0052D3D5 /* SpeedFlipUITests.swift */; };
 		BF83E4D227275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4D127275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift */; };
 		BF83E4DF27275C630052D3D5 /* SpeedFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4DE27275C630052D3D5 /* SpeedFlipTests.swift */; };
+		BFF700562728222500FF5F08 /* ScoreScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF700552728222500FF5F08 /* ScoreScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,7 @@
 		BF56F6322721D3E100BFF8F7 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
 		BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScreenViewController.swift; sourceTree = "<group>"; };
-		BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		BF56F63B2721D40D00BFF8F7 /* ScoreViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewSwiftUI.swift; sourceTree = "<group>"; };
 		BF56F63D2721D41300BFF8F7 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		BF56F63F2721D41600BFF8F7 /* TimerView(UIView).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerView(UIView).swift"; sourceTree = "<group>"; };
 		BF56F6412721D52700BFF8F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		BF83E4D127275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF83E4DC27275C630052D3D5 /* SpeedFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF83E4DE27275C630052D3D5 /* SpeedFlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipTests.swift; sourceTree = "<group>"; };
+		BFF700552728222500FF5F08 /* ScoreScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +156,8 @@
 		BF83E4BE2725D7380052D3D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */,
+				BF56F63B2721D40D00BFF8F7 /* ScoreViewSwiftUI.swift */,
+				BFF700552728222500FF5F08 /* ScoreScreenVC.swift */,
 				BF83E4C32726FB360052D3D5 /* ScoreCell.swift */,
 				BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */,
 				BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */,
@@ -324,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF56F62D2721D3B000BFF8F7 /* CardGrid.swift in Sources */,
-				BF56F63C2721D40D00BFF8F7 /* ScoreViewController.swift in Sources */,
+				BF56F63C2721D40D00BFF8F7 /* ScoreViewSwiftUI.swift in Sources */,
 				BF56F62B2721D39400BFF8F7 /* CardAnimation.swift in Sources */,
 				BF56F6352721D3F900BFF8F7 /* MenuScreenViewController.swift in Sources */,
 				BF56F63E2721D41300BFF8F7 /* Stopwatch.swift in Sources */,
@@ -334,6 +337,7 @@
 				BF56F6292721D37600BFF8F7 /* CardView.swift in Sources */,
 				BF56F6402721D41600BFF8F7 /* TimerView(UIView).swift in Sources */,
 				BF83E4C42726FB360052D3D5 /* ScoreCell.swift in Sources */,
+				BFF700562728222500FF5F08 /* ScoreScreenVC.swift in Sources */,
 				BF56F6122721D21B00BFF8F7 /* SpeedFlipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
