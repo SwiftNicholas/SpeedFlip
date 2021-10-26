@@ -24,7 +24,29 @@
 		BF56F6482721D76B00BFF8F7 /* GameAudio in Resources */ = {isa = PBXBuildFile; fileRef = BF56F6472721D76A00BFF8F7 /* GameAudio */; };
 		BF56F64A2721D77100BFF8F7 /* MenuAudio in Resources */ = {isa = PBXBuildFile; fileRef = BF56F6492721D77100BFF8F7 /* MenuAudio */; };
 		BF56F64C2721D77700BFF8F7 /* SoundEffects in Resources */ = {isa = PBXBuildFile; fileRef = BF56F64B2721D77700BFF8F7 /* SoundEffects */; };
+		BF83E4C42726FB360052D3D5 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4C32726FB360052D3D5 /* ScoreCell.swift */; };
+		BF83E4C8272702F50052D3D5 /* 512_without background in Resources */ = {isa = PBXBuildFile; fileRef = BF83E4C7272702F50052D3D5 /* 512_without background */; };
+		BF83E4D027275C2B0052D3D5 /* SpeedFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4CF27275C2B0052D3D5 /* SpeedFlipUITests.swift */; };
+		BF83E4D227275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4D127275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift */; };
+		BF83E4DF27275C630052D3D5 /* SpeedFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83E4DE27275C630052D3D5 /* SpeedFlipTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF83E4D327275C2B0052D3D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF082EBE2721CFDD00B0834B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF56F60E2721D21B00BFF8F7;
+			remoteInfo = SpeedFlip;
+		};
+		BF83E4E027275C630052D3D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF082EBE2721CFDD00B0834B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF56F60E2721D21B00BFF8F7;
+			remoteInfo = SpeedFlip;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BF56F60F2721D21B00BFF8F7 /* SpeedFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,10 +67,31 @@
 		BF56F6472721D76A00BFF8F7 /* GameAudio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameAudio; sourceTree = "<group>"; };
 		BF56F6492721D77100BFF8F7 /* MenuAudio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MenuAudio; sourceTree = "<group>"; };
 		BF56F64B2721D77700BFF8F7 /* SoundEffects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SoundEffects; sourceTree = "<group>"; };
+		BF83E4C32726FB360052D3D5 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		BF83E4C7272702F50052D3D5 /* 512_without background */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "512_without background"; sourceTree = "<group>"; };
+		BF83E4CD27275C2B0052D3D5 /* SpeedFlipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedFlipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF83E4CF27275C2B0052D3D5 /* SpeedFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipUITests.swift; sourceTree = "<group>"; };
+		BF83E4D127275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF83E4DC27275C630052D3D5 /* SpeedFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF83E4DE27275C630052D3D5 /* SpeedFlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFlipTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BF56F60C2721D21B00BFF8F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF83E4CA27275C2B0052D3D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF83E4D927275C630052D3D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				BF56F6102721D21B00BFF8F7 /* SpeedFlip */,
+				BF83E4CE27275C2B0052D3D5 /* SpeedFlipUITests */,
+				BF83E4DD27275C630052D3D5 /* SpeedFlipTests */,
 				BF082EC72721CFDD00B0834B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				BF56F60F2721D21B00BFF8F7 /* SpeedFlip.app */,
+				BF83E4CD27275C2B0052D3D5 /* SpeedFlipUITests.xctest */,
+				BF83E4DC27275C630052D3D5 /* SpeedFlipTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +135,7 @@
 				BF56F6412721D52700BFF8F7 /* Assets.xcassets */,
 				BF56F6262721D35600BFF8F7 /* AudioManager.swift */,
 				BF56F6322721D3E100BFF8F7 /* GameInfo.swift */,
+				BF83E4C7272702F50052D3D5 /* 512_without background */,
 			);
 			path = SpeedFlip;
 			sourceTree = "<group>";
@@ -107,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BF56F63B2721D40D00BFF8F7 /* ScoreViewController.swift */,
+				BF83E4C32726FB360052D3D5 /* ScoreCell.swift */,
 				BF56F6392721D40900BFF8F7 /* PlayScreenViewController.swift */,
 				BF56F6342721D3F900BFF8F7 /* MenuScreenViewController.swift */,
 			);
@@ -120,6 +169,23 @@
 				BF56F6442721D52B00BFF8F7 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF83E4CE27275C2B0052D3D5 /* SpeedFlipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF83E4CF27275C2B0052D3D5 /* SpeedFlipUITests.swift */,
+				BF83E4D127275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift */,
+			);
+			path = SpeedFlipUITests;
+			sourceTree = "<group>";
+		};
+		BF83E4DD27275C630052D3D5 /* SpeedFlipTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF83E4DE27275C630052D3D5 /* SpeedFlipTests.swift */,
+			);
+			path = SpeedFlipTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +208,42 @@
 			productReference = BF56F60F2721D21B00BFF8F7 /* SpeedFlip.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BF83E4CC27275C2B0052D3D5 /* SpeedFlipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF83E4D527275C2B0052D3D5 /* Build configuration list for PBXNativeTarget "SpeedFlipUITests" */;
+			buildPhases = (
+				BF83E4C927275C2B0052D3D5 /* Sources */,
+				BF83E4CA27275C2B0052D3D5 /* Frameworks */,
+				BF83E4CB27275C2B0052D3D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF83E4D427275C2B0052D3D5 /* PBXTargetDependency */,
+			);
+			name = SpeedFlipUITests;
+			productName = SpeedFlipUITests;
+			productReference = BF83E4CD27275C2B0052D3D5 /* SpeedFlipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BF83E4DB27275C630052D3D5 /* SpeedFlipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF83E4E227275C630052D3D5 /* Build configuration list for PBXNativeTarget "SpeedFlipTests" */;
+			buildPhases = (
+				BF83E4D827275C630052D3D5 /* Sources */,
+				BF83E4D927275C630052D3D5 /* Frameworks */,
+				BF83E4DA27275C630052D3D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF83E4E127275C630052D3D5 /* PBXTargetDependency */,
+			);
+			name = SpeedFlipTests;
+			productName = SpeedFlipTests;
+			productReference = BF83E4DC27275C630052D3D5 /* SpeedFlipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +256,14 @@
 				TargetAttributes = {
 					BF56F60E2721D21B00BFF8F7 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					BF83E4CC27275C2B0052D3D5 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BF56F60E2721D21B00BFF8F7;
+					};
+					BF83E4DB27275C630052D3D5 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BF56F60E2721D21B00BFF8F7;
 					};
 				};
 			};
@@ -171,6 +281,8 @@
 			projectRoot = "";
 			targets = (
 				BF56F60E2721D21B00BFF8F7 /* SpeedFlip */,
+				BF83E4CC27275C2B0052D3D5 /* SpeedFlipUITests */,
+				BF83E4DB27275C630052D3D5 /* SpeedFlipTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +298,21 @@
 				BF56F6462721D52B00BFF8F7 /* Main.storyboard in Resources */,
 				BF56F64A2721D77100BFF8F7 /* MenuAudio in Resources */,
 				BF56F6482721D76B00BFF8F7 /* GameAudio in Resources */,
+				BF83E4C8272702F50052D3D5 /* 512_without background in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF83E4CB27275C2B0052D3D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF83E4DA27275C630052D3D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,11 +333,42 @@
 				BF56F6332721D3E100BFF8F7 /* GameInfo.swift in Sources */,
 				BF56F6292721D37600BFF8F7 /* CardView.swift in Sources */,
 				BF56F6402721D41600BFF8F7 /* TimerView(UIView).swift in Sources */,
+				BF83E4C42726FB360052D3D5 /* ScoreCell.swift in Sources */,
 				BF56F6122721D21B00BFF8F7 /* SpeedFlipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF83E4C927275C2B0052D3D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF83E4D027275C2B0052D3D5 /* SpeedFlipUITests.swift in Sources */,
+				BF83E4D227275C2B0052D3D5 /* SpeedFlipUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF83E4D827275C630052D3D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF83E4DF27275C630052D3D5 /* SpeedFlipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF83E4D427275C2B0052D3D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF56F60E2721D21B00BFF8F7 /* SpeedFlip */;
+			targetProxy = BF83E4D327275C2B0052D3D5 /* PBXContainerItemProxy */;
+		};
+		BF83E4E127275C630052D3D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF56F60E2721D21B00BFF8F7 /* SpeedFlip */;
+			targetProxy = BF83E4E027275C630052D3D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BF082ED72721CFDF00B0834B /* Debug */ = {
@@ -389,6 +547,96 @@
 			};
 			name = Release;
 		};
+		BF83E4D627275C2B0052D3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z83TAWGQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholasverrico.SpeedFlipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeedFlip;
+			};
+			name = Debug;
+		};
+		BF83E4D727275C2B0052D3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z83TAWGQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholasverrico.SpeedFlipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpeedFlip;
+			};
+			name = Release;
+		};
+		BF83E4E327275C630052D3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z83TAWGQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholasverrico.SpeedFlipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeedFlip.app/SpeedFlip";
+			};
+			name = Debug;
+		};
+		BF83E4E427275C630052D3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Z83TAWGQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholasverrico.SpeedFlipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeedFlip.app/SpeedFlip";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +654,24 @@
 			buildConfigurations = (
 				BF56F6202721D21E00BFF8F7 /* Debug */,
 				BF56F6212721D21E00BFF8F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF83E4D527275C2B0052D3D5 /* Build configuration list for PBXNativeTarget "SpeedFlipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF83E4D627275C2B0052D3D5 /* Debug */,
+				BF83E4D727275C2B0052D3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF83E4E227275C630052D3D5 /* Build configuration list for PBXNativeTarget "SpeedFlipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF83E4E327275C630052D3D5 /* Debug */,
+				BF83E4E427275C630052D3D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

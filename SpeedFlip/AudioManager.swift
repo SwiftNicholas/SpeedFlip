@@ -12,6 +12,7 @@ import GameplayKit
 import UIKit
 
 
+
 /// Singleton audio handling
 struct AudioManager{
     
@@ -145,5 +146,6 @@ extension AVPlayer {
         return player
     }
 }
+
 
 

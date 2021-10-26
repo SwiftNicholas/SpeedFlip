@@ -16,17 +16,11 @@ struct ScoreView: View {
         VStack {
       
         ForEach(scores){ score in
-            HStack{
-                Text(score.name)
-                    .font(.system(.title))
-                Spacer()
-                Text(score.time)
-                    .font(.system(.title))
-            }
+            ScoreCell(username: score.name, time: score.time)
         }
             Spacer()
         } .background(Image("_bg_blue"))
-}
+    }
 }
 
 struct Score: Identifiable {
@@ -39,3 +33,5 @@ struct Score: Identifiable {
         self.time = time
     }
 }
+
+
